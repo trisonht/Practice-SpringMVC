@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="container">
+  <form th:action="${'/admin/new-user'}" th:object="${the_user}" method="post">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">name</label>
+        <input type="text" class="form-control" id="inputEmail4" th:field="*{name}">
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">age</label>
+      <input type="number" class="form-control" id="inputAddress" th:field="*{age}">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">salary</label>
+      <input type="number" class="form-control" id="inputAddress2" th:field="*{salary}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+</div>
+</body>
+</html>
